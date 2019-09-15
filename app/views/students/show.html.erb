@@ -2,7 +2,7 @@
 
 <section class="courses">
   <% @student.courses.each do |course| %>
-    <p class="grades"><%= course.name %>: <%= @student.grade_for_course(course).join %></p>
+    <p class="grades"><%= course.name %>: <%= @student.grade_for_course(course) %></p>
   <% end %>
 </section>
 

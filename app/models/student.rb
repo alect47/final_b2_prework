@@ -5,6 +5,6 @@ class Student < ApplicationRecord
 
   #seems to work just with AR course, no need for id?
   def grade_for_course(course)
-    course_students.where(course_id: course).pluck(:grade)
+    course_students.find_by(course_id: course).grade
   end
 end
