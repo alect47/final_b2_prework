@@ -2,6 +2,6 @@
 
 <section class="students">
   <% @ordered_course_students.each do |course_student| %>
-      <%= course_student.student.name %>
+      <ul><%= course_student.student.name %>:<%= course_student.grade %></ul>
   <% end %>
 </section>
