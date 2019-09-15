@@ -3,7 +3,8 @@ class Student < ApplicationRecord
   has_many :courses, through: :course_students
   validates_presence_of :name
 
-  def grade_for_course(course_id)
-    course_students.where(course_id: course_id).pluck(:grade)
+  #seems to work just with AR course, no need for id?
+  def grade_for_course(course)
+    course_students.where(course_id: course).pluck(:grade)
   end
 end

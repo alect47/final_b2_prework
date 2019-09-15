@@ -1,0 +1,7 @@
+<h1> <%= @course.name %></h1>
+
+<section class="students">
+  <% @ordered_course_students.each do |course_student| %>
+      <%= course_student.student.name %>
+  <% end %>
+</section>

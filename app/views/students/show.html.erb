@@ -2,6 +2,10 @@
 
 <section class="courses">
   <% @student.courses.each do |course| %>
-    <p class="grades"><%= course.name %>: <%= @student.grade_for_course(course.id).join %></p>
+    <p class="grades"><%= course.name %>: <%= @student.grade_for_course(course).join %></p>
   <% end %>
 </section>
+
+<!-- < % @student.course_students.each do |student_course|%>
+  <p>< %= student_course.course.name %>: < %= student_course.grade %></p>
+< % end %> -->

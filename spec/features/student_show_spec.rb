@@ -24,9 +24,7 @@ describe 'When user visits student show page' do
       expect(page).to have_content("#{@science.name}: 81.0")
       expect(page).to_not have_content(@english.name)
     end
-  end
 
-  it 'they see student info' do
     visit "/students/#{@luke.id}"
     expect(page).to have_content("Student name: #{@luke.name}")
     within ".courses" do
