@@ -30,6 +30,7 @@ describe Student, type: :model do
       @luke.courses << @english
       @gus.courses << @science
       @gus.courses << @english
+
     end
   end
 end
